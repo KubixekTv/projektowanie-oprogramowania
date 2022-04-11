@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
+@font-face {
+    font-family: Bahnschrift;
+    src: url(fonts/bahnschrift.ttf);
+  }
 :root{
     --dark1: #111;
     --dark2: #222;
@@ -7,7 +11,6 @@
     --dark4: #444;
     --dark5: #555;
 }
-
 body{
     user-select: none;
     font-family: 'Bahnschrift', sans-serif;
@@ -81,7 +84,7 @@ a{
     font-family: 'Rubik', sans-serif;
     text-align: center;
     color: #fff;
-    text-shadow: 0 0 10px #000;
+    text-shadow: 5px 5px 0px #000;
 
     background-image: url(images/bg2.jpg);
     background-size: 200%;
