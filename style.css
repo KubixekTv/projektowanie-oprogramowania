@@ -100,11 +100,12 @@ a{
     border-width: 10px 0 10px 0;
     box-shadow: 0 0 10px #000;
 
-    animation: slide 120s linear infinite;
+    animation: slide 240s linear infinite;
 }
 @keyframes slide {
-    0%{background-position-x: 7680px;}
-    100%{background-position-x: 0;}
+    0%{background-position-x: left;}
+    50%{background-position-x: right;}
+    100%{background-position-x: left;}
 }
 span.title{
     font-size: 50px;
