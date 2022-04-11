@@ -87,7 +87,7 @@ a{
     text-shadow: 5px 5px 0px #000;
 
     background-image: url(images/bg2.jpg);
-    background-size: 200%;
+    background-size: 250%;
     
     background-color: #444;
     background-blend-mode: multiply;
@@ -144,24 +144,25 @@ span.subtitle{
     background-color: lightgray; /* Tint color */
     background-blend-mode: multiply;
     height: 190px;
-    background-size: 110%;
+    background-size: 100%;
     background-position: center;
     cursor: pointer;
     margin: 5px;
     border-radius: 10px;
-    filter: grayscale(0);
+    filter: grayscale(1);
     transition: 0.2s;
 }
 .bg_button:hover{
     z-index: 1;
     background-size: 120%;
-    background-color: gray;
+    /*background-color: gray;*/
+    filter: grayscale(0);
     outline: 5px solid var(--dark3);
 }
 .bg_button:hover .button{
     padding-left: 40px;
     /*font-size: 22px;*/
-    background-color: var(--dark3);
+    /*background-color: var(--dark3);*/
 }
 /*.bg_button:hover .sub_button{
     backdrop-filter: grayscale(1);
