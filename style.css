@@ -83,25 +83,25 @@ a{
     color: #fff;
     text-shadow: 0 0 10px #000;
 
-    background-image: url(images/bg.jpg);
+    background-image: url(images/bg2.jpg);
     background-size: 200%;
+    
     background-color: #444;
     background-blend-mode: multiply;
 
     margin: 2em 0 2em 0;
     padding: 10em 0 10em 0;
 
-    filter: grayscale(1);
+    /*filter: grayscale(1);*/
     border: solid black;
     border-width: 10px 0 10px 0;
     box-shadow: 0 0 10px #000;
 
-    animation: slide 60s ease-in-out infinite;
+    animation: slide 120s linear infinite;
 }
 @keyframes slide {
-    0%{background-position-x: left;}
-    50%{background-position-x: right;}
-    100%{background-position-x: left;}
+    0%{background-position-x: 7680px;}
+    100%{background-position-x: 0;}
 }
 span.title{
     font-size: 50px;
