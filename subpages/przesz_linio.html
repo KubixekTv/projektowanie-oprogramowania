@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Przeszukiwanie liniowe</title>
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'> 
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <header id="header" class="header">
+            <span id="theme_change">
+                <a href="../index.html" class="header_button">Powrót</a>
+                <!--<img src="images/dark_mode.svg" id="theme_mode" onclick="theme_color()">-->
+            </span>
+            
+            <b style="text-transform:uppercase;">projektowanie oprogramowania</b>
+        </header>
+
+        <div class="title_screen" style="background-image: url(../images/przesz_linio/laptop.jpg);">
+            <span class="title">Przeszukiwanie liniowe</span>
+            <!--<br>
+            <span class="subtitle">Wszystkie dotychczasowe materiały z lekcji dla klasy 2pr</span>-->
+        </div>
+
+        <div class="content" id="content">
+            <h2>Definicja</h2>
+            <i>Przeszukiwanie liniowe (lub wyszukiwanie sekwencyjne)</i> – najprostszy algorytm wyszukiwania informacji w ciągu danych, np. zapisanych w tablicy lub na liście. Polega na porównywaniu żądanego klucza z kolejnymi kluczami z sekwencji danych – wyszukiwanie kończy się powodzeniem, gdy zostanie znaleziony klucz, albo niepowodzeniem, gdy zostaną przejrzane wszystkie klucze.
+            <h2>Pseudokod</h2>
+            <div class="pseudocode">
+                szukany_klucz := określona wartość;<br>
+                znaleziony_indeks := ?;<br>
+                for index := 1 to n do<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if tablica[index].klucz = szukany_klucz then<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;begin<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//<i>znaleziono element o podanym kluczu, zapamiętujemy pozycję w tablicy</i><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;znaleziony_indeks := index;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break; //<i>koniec iterowania</i><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;end;<br>
+            </div>
+            <br>
+            Wyszukiwanie liniowe może być jedynym sposobem wyszukiwania, gdy nie wiadomo niczego na temat kolejności kluczy.
+            <br><br>
+            Dla dużej liczby danych algorytm jest bardzo nieefektywny, jednak gdy danych jest względnie mało, jest z powodzeniem stosowany (np. w tablicach mieszających, w których problem kolizji rozwiązuje się metodą łańcuchową).
+            <br><br>
+            Dodatkowo jeśli wiadomo, że pewne klucze mogą być wyszukiwane częściej niż inne, można modyfikować kolejność danych, tak aby ponowne wyszukiwanie tego samego klucza kończyło się powodzeniem szybciej. Metoda ta nosi nazwę move-to-front, Donald Knuth wymienia w swojej pracy <a href="https://pl.wikipedia.org/wiki/Sztuka_programowania">Sztuka programowania</a><br>dwie strategie:
+            <ol>
+                <li>natychmiastowe przesunięcie znalezionego elementu na początek sekwencji</li>
+                <li>przesunięcie tylko o jedną pozycję w stronę początku sekwencji</li>
+            </ol>
+        </div>
+
+        <footer id="footer" class="footer">
+            2022r. Jakub Mazur 2pr
+        </footer>
+
+        <script type="text/javascript" src="../script.js"></script>
+    </body>
+</html>

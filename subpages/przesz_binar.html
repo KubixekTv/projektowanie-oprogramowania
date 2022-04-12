@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Przeszukiwanie binarne</title>
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'> 
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <header id="header" class="header">
+            <span id="theme_change">
+                <a href="../index.html" class="header_button">Powrót</a>
+                <!--<img src="images/dark_mode.svg" id="theme_mode" onclick="theme_color()">-->
+            </span>
+            
+            <b style="text-transform:uppercase;">projektowanie oprogramowania</b>
+        </header>
+
+        <div class="title_screen" style="background-image: url(../images/przesz_binar/klawiatura.jpg);">
+            <span class="title">przeszukiwanie<br>binarne</span>
+            <!--<br>
+            <span class="subtitle">Wszystkie dotychczasowe materiały z lekcji dla klasy 2pr</span>-->
+        </div>
+
+        <div class="content" id="content">
+            <h2>Definicja</h2>
+            <i>Wyszukiwanie binarne</i> – algorytm opierający się na metodzie dziel i zwyciężaj, który w czasie logarytmicznym stwierdza, czy szukany element znajduje się w uporządkowanej tablicy i jeśli się znajduje, podaje jego indeks. Np. jeśli tablica zawiera milion elementów, wyszukiwanie binarne musi sprawdzić maksymalnie 20 elementów <i>(log<sub>2</sub> 1'000'000 &#8776; 20)</i> w celu znalezienia żądanej wartości. Dla porównania wyszukiwanie liniowe wymaga w najgorszym przypadku przejrzenia wszystkich elementów tablicy.
+
+            <h2>Zasada działania algorytmu</h2>
+            Uporządkowana tablica jest dzielona na coraz mniejsze przedziały do momentu, gdy przedział osiągnie długość jeden, kiedy możemy jednym sprawdzeniem określić, czy element znajduje się w tablicy.
+            <br><br>
+            W pojedynczym kroku rozważa się jeden przedział charakteryzowany dwoma indeksami: początkowym <i>a</i> i końcowym <i>b</i>. Algorytm rozpoczyna wyszukiwanie od całej tablicy.
+            <br><br>
+            Następnie wyznaczany jest środek tego przedziału <i>c = [(a + b) / 2]</i>.
+            <br><br>
+            <i>Przedział jest zawężany</i> – dzięki uporządkowaniu danych wiadomo, że albo poszukiwany element może znajdować się w indeksach <i>[a;c]</i> albo za nim. Innymi słowy wybór ogranicza się do przedziału [a,c] gdy poszukiwany element jest mniejszy lub równy zapisanemu pod indeksem <i>c</i>, albo <i>[c + 1,b]</i> w przeciwnym razie.
+            <h2>Implementacja</h2>
+            <sup>Wykorzystanie języka TypeScript</sup>
+            <div class="pseudocode">
+                /**<br>
+                * Zwraca indeks poszukiwanego elementu<br>
+                * lub null jeśli dany element w tablicy nie istnieje.<br>
+                *<br>
+                * @param tablica - posortowana tablica liczb.<br>
+                * @param szukana - poszukiwana wartość.<br>
+                */<br>
+                function wyszukiwanieBinarnie(tablica: number[], szukana: number): number {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;let lewo = 0;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;let prawo = tablica.length - 1;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;let przeszukiwany_indeks;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;while (lewo &#60;= prawo) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;przeszukiwany_indeks = Math.floor((lewo + prawo) / 2);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (tablica[przeszukiwany_indeks] &#60; szukana) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lewo = przeszukiwany_indeks + 1;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if (tablica[przeszukiwany_indeks] &#62; szukana) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prawo = przeszukiwany_indeks - 1;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return przeszukiwany_indeks;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return null;<br>
+                }<br>
+            </div>
+        </div>
+
+        <footer id="footer" class="footer">
+            2022r. Jakub Mazur 2pr
+        </footer>
+
+        <script type="text/javascript" src="../script.js"></script>
+    </body>
+</html>

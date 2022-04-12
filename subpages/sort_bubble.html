@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sortowanie bąbelkowe</title>
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'> 
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <header id="header" class="header">
+            <span id="theme_change">
+                <a href="../index.html" class="header_button">Powrót</a>
+            </span>
+            
+            <b style="text-transform:uppercase;">projektowanie oprogramowania</b>
+        </header>
+
+        <div class="title_screen" style="background-image: url(../images/sort_bubble/bubble_bg.webp);">
+            <span class="title">Sortowanie<br>bąbelkowe</span>
+        </div>
+
+        <div class="content" id="content">
+            <h2>Definicja</h2>
+            <i>Sortowanie bąbelkowe (ang. bubble sort)</i> – prosta metoda sortowania o złożoności czasowej i pamięciowej.
+            <br>
+            Polega na porównywaniu dwóch kolejnych elementów i zamianie ich kolejności, jeżeli zaburza ona porządek, w jakim się sortuje tablicę. Sortowanie kończy się, gdy podczas kolejnego przejścia nie dokonano żadnej zmiany.
+            
+            <h2>Dowód matematyczny</h2>
+            Algorytm opiera się na zasadzie maksimum, tj. każda liczba jest mniejsza lub równa od liczby maksymalnej. Porównując kolejno liczby, można wyznaczyć największą z nich. Następnie ciąg częściowo posortowany (mający liczbę maksymalną) można skrócić o tę liczbę i ponowić szukanie maksimum, już bez elementów odrzuconych i tak długo, aż zostanie nam jeden element. Otrzymane kolejne maksima są coraz mniejsze, przez co ciąg jest uporządkowany.
+
+            <h2>Złożoność obliczeniowa</h2>
+            Algorytm wykonuje <i>n - 1</i> przejść, a w każdym przejściu wykonuje <i>n - k</i> porównań (gdzie <i>k = 1,2...n - 1</i> to numer przejścia), przez co jego teoretyczna złożoność czasowa wynosi <i>O(n<sup>2</sup>)</i> W podstawowej wersji algorytmu nie można tego czasu skrócić, a każda permutacja powoduje, że algorytm jest wykonywany w czasie pesymistycznym.
+            <h4>Modyfikacje powodujące ulepszenie czasu</h4>
+            Algorytm można rozbudować tak, by czas optymistyczny był lepszy. Najłatwiejsze jest dodanie flagi informującej, czy w danej iteracji doszło do zmiany. Flaga jest zerowana na wejściu w przebiegu pętli, w przypadku natrafienia na zmianę jest podnoszona, a po wykonaniu przejścia sprawdzana. Jeśli nie było zmian, to sortowanie jest zakończone. Modyfikacja ta wprawdzie wydłuża czas wykonania jednego przejścia przez pętlę (gdyż trzeba wyzerować flagę, podnieść ją i sprawdzić), jednakże w wariancie optymistycznym (ciąg częściowo posortowany) może zaoszczędzić iteracji, przez co algorytm będzie działać szybciej.
+            
+            <h2>Pseudokod</h2>
+            Pseudokod wersji podstawowej algorytmu dla tablicy o rozmiarze n (elementy tablicy są numerowane od 0 do n-1):
+            <div class="pseudocode">
+            procedure bubbleSort( A : lista elementów do posortowania )<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;n = liczba_elementów(A)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;do<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (i = 0; i < n-1; i++) do:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if A[i] > A[i+1] then<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(A[i], A[i+1])<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end if<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end for<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n-1<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;while n > 1<br>
+            end procedure<br>
+            </div>
+
+            <h2>Symulacja sortowania</h2>
+            <div class="imgbox">
+                <center><img src="../images/sort_bubble/bubble_sort.gif"></center>
+            </div>
+        </div>
+
+        <footer id="footer" class="footer">
+            2022r. Jakub Mazur 2pr
+        </footer>
+
+        <script type="text/javascript" src="../script.js"></script>
+    </body>
+</html>

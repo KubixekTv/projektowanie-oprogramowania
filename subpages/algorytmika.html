@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Algorytmika</title>
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'> 
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <header id="header" class="header">
+            <span id="theme_change">
+                <a href="../index.html" class="header_button">Powrót</a>
+                <!--<img src="images/dark_mode.svg" id="theme_mode" onclick="theme_color()">-->
+            </span>
+            
+            <b style="text-transform:uppercase;">projektowanie oprogramowania</b>
+        </header>
+
+        <div class="title_screen" style="background-image: url(../images/algorytmy/robot.jpg);">
+            <span class="title">algorytmika</span>
+            <!--<br>
+            <span class="subtitle">Wszystkie dotychczasowe materiały z lekcji dla klasy 2pr</span>-->
+        </div>
+
+        <div class="content" id="content">
+            <h2>Definicja</h2>
+            Algorytm, to skończony ciąg jasno zdefiniowanych czynności koniecznych do wykonania pewnego rodzaju zadań, sposób postępowania prowadzący do rozwiązania problemu. Można go przedstawić na schemacie blokowym.
+            
+            <h2>Pochodzenie</h2>
+            Słowo „algorytm” pochodzi od łacińskiego słowa algorithmus, oznaczającego wykonywanie działań przy pomocy liczb arabskich (w odróżnieniu od abacism – przy pomocy abakusa), które z kolei wzięło się od nazwy „Algoritmi”, zlatynizowanej wersji nazwiska „al-Chwarizmi” Abu Abdullaha Muhammada ibn Musy al-Chuwarizmiego, matematyka perskiego z IX wieku.
+            
+            <h2>Przeznaczenie</h2>
+            Zadaniem algorytmu jest przeprowadzenie systemu z pewnego stanu początkowego do pożądanego stanu końcowego. Badaniem algorytmów zajmuje się algorytmika. Algorytm może zostać zaimplementowany w postaci programu komputerowego.
+            
+            <h2>Przykładowe algorytmy</h2>
+            <ul>
+                <li><a href="https://pl.wikipedia.org/wiki/Algorytm_Euklidesa">algorytm Euklidesa</a></li>
+                <li><a href="https://pl.wikipedia.org/wiki/Algorytm_Fermata" style="animation-delay: 1s;">algorytm Fermata</a></li>
+                <li><a href="https://pl.wikipedia.org/wiki/Algorytm_Luhna" style="animation-delay: 2s;">algorytm Luhna</a></li>
+                <li><a href="https://pl.wikipedia.org/wiki/Algorytm_mr%C3%B3wkowy" style="animation-delay: 3s;">algorytm mrówkowy</a></li>
+            </ul>
+
+            <h2>Paradygmaty tworzenia algorytmów komputerowych</h2>
+            <ul>
+                <li><i>dziel i zwyciężaj</i> – dzielimy problem na kilka mniejszych, a te znowu dzielimy, aż ich rozwiązania staną się oczywiste</li>
+                <li><i>programowanie dynamiczne</i> – problem dzielony jest na kilka, ważność każdego z nich jest oceniana i po pewnym wnioskowaniu wyniki analizy niektórych prostszych zagadnień wykorzystuje się do rozwiązania głównego problemu</li>
+                <li><i>metoda zachłanna</i> – nie analizujemy podproblemów dokładnie, tylko wybieramy najbardziej obiecującą w danym momencie drogę rozwiązania</li>
+                <li><i>programowanie liniowe</i> – oceniamy rozwiązanie problemu przez pewną funkcję jakości i szukamy jej minimum</li>
+                <li><i>wyszukiwanie wyczerpujące</i> – przeszukujemy zbiór danych, aż do odnalezienia rozwiązania</li>
+                <li><i>heurystyka</i> – człowiek na podstawie swojego doświadczenia tworzy algorytm, który działa w najbardziej prawdopodobnych warunkach; rozwiązanie zawsze jest przybliżone.</li>
+            </ul>
+
+            <h2>Techniki implementacji algorytmów komputerowych</h2>
+            <ul>
+                <li><i>proceduralność</i> – algorytm dzieli się na szereg podstawowych procedur. Wiele algorytmów ma wspólne biblioteki standardowych procedur, z których są one wywoływane w razie potrzeby.</li>
+                <li><i>praca sekwencyjna</i> – wykonywanie poszczególnych procedur algorytmu, według kolejności ich wywołań; naraz pracuje tylko jedna procedura</li>
+                <li><i>praca wielowątkowa</i> – procedury wykonywane są sekwencyjnie, lecz kolejność ich wykonania jest trudna do przewidzenia dla programisty</li>
+                <li><i>praca równoległa</i> – wiele procedur wykonywanych jest w tym samym czasie, wymieniają się one danymi</li>
+                <li><i>rekurencja</i> – procedura lub funkcja wywołuje sama siebie, aż do uzyskania wyniku lub błędu</li>
+                <li><i>obiektowość</i> – procedury i dane łączy się w pewne klasy reprezentujące najważniejsze elementy algorytmu oraz stan wewnętrzny wykonującego je systemu</li>
+                <li>algorytm probabilistyczny</i> – działa poprawnie z bardzo wysokim prawdopodobieństwem, ale wynik nie jest pewny.</li>
+            </ul>
+            <br><br>
+            <h2>Przedstawianie algorytmów</h2>
+            <ul>
+                <li><i>Słownie</i> - rozpoczyna się dyskusją w jaki sposób można rozwiązać dane zadanie. Służy wyrobieniu intuicji i ukierunkowaniu rozwiązań we właściwe sposoby i techniki przydatne w rozwiązaniu.</li>
+                    <ol>
+                        <li>Start</li>
+                        <li>Wprowadź a, b</li>
+                        <li>Zmiennej P przypisz wartość P=a&#8729;b</li>
+                        <li>Wyprowadź P</li>
+                        <li>Stop</li>
+                    </ol>
+                <li><i>Blokowo</i> - składa się ze bloków oraz połączeń między nimi. Są tu zapisane operacje, które mają być wykonane, a połączenia wyznaczają kolejność wykonania.</li>
+                <a href="schem_blok.html">dalsza częśco schemacie blokowym</a>
+            </ul>
+        </div>
+
+        <footer id="footer" class="footer">
+            2022r. Jakub Mazur 2pr
+        </footer>
+
+        <script type="text/javascript" src="../script.js"></script>
+    </body>
+</html>
