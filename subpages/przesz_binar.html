@@ -37,31 +37,31 @@
             <h2>Implementacja</h2>
             <sup>Wykorzystanie języka TypeScript</sup>
             <div class="pseudocode">
-                /**<br>
-                * Zwraca indeks poszukiwanego elementu<br>
-                * lub null jeśli dany element w tablicy nie istnieje.<br>
-                *<br>
-                * @param tablica - posortowana tablica liczb.<br>
-                * @param szukana - poszukiwana wartość.<br>
-                */<br>
-                function wyszukiwanieBinarnie(tablica: number[], szukana: number): number {<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;let lewo = 0;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;let prawo = tablica.length - 1;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;let przeszukiwany_indeks;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;while (lewo &#60;= prawo) {<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;przeszukiwany_indeks = Math.floor((lewo + prawo) / 2);<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (tablica[przeszukiwany_indeks] &#60; szukana) {<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lewo = przeszukiwany_indeks + 1;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if (tablica[przeszukiwany_indeks] &#62; szukana) {<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prawo = przeszukiwany_indeks - 1;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return przeszukiwany_indeks;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;return null;<br>
-                }<br>
+                /**<hr>
+                * Zwraca indeks poszukiwanego elementu<hr>
+                * lub null jeśli dany element w tablicy nie istnieje.<hr>
+                *<hr>
+                * @param tablica - posortowana tablica liczb.<hr>
+                * @param szukana - poszukiwana wartość.<hr>
+                */<hr>
+                function wyszukiwanieBinarnie(tablica: number[], szukana: number): number {<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;let lewo = 0;<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;let prawo = tablica.length - 1;<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;let przeszukiwany_indeks;<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;while (lewo &#60;= prawo) {<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;przeszukiwany_indeks = Math.floor((lewo + prawo) / 2);<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (tablica[przeszukiwany_indeks] &#60; szukana) {<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lewo = przeszukiwany_indeks + 1;<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if (tablica[przeszukiwany_indeks] &#62; szukana) {<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prawo = przeszukiwany_indeks - 1;<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return przeszukiwany_indeks;<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;<hr>
+                &nbsp;&nbsp;&nbsp;&nbsp;return null;<hr>
+                }<hr>
             </div>
         </div>
 

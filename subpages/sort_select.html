@@ -38,57 +38,57 @@
                 <li>
                     przez wyszukiwanie największego składnika
                     <div class="pseudocode">
-                    int Max_element_indeks(int n)<br>
-                    {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;int max = 0;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;for (int i = 1; i < n; i++)<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (t[i] > t[max])<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = i;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;return max;<br>
-                    }<br>
-                    <br>
-                    void Selection_sort(int n)<br>
-                    {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;for (int i = n; i >= 2; i--)<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int max = Max_element_indeks(i);<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (max != i - 1)<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(t[i - 1], t[max]);<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                    }<br>
+                    int Max_element_indeks(int n)<hr>
+                    {<hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;int max = 0;<hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;for (int i = 1; i < n; i++)<hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (t[i] > t[max])<hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = i;<hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return max;<hr>
+                    }<hr>
+                    <hr>
+                    void Selection_sort(int n)<hr>
+                    {<hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;for (int i = n; i >= 2; i--)<hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;{<hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int max = Max_element_indeks(i);<hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (max != i - 1)<hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(t[i - 1], t[max]);<hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<hr>
+                    }<hr>
                     </div>
                 </li>
                 <li>
                     przez wyszukiwanie najmniejszego składnika:
                     <div class="pseudocode">
-                        using namespace std;<br>
-                        <br>
-                        void selection_sort(int n, int t[]);<br>
-                        <br>
-                        int main(void)<br>
-                        {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;int tab[20];<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;srand(time(NULL));<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;for(int i=0; i&#60;20; i++) {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tab[i] = rand()%100;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &#60;&#60; tab[i] &#60;&#60; " ";<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;cout &#60;&#60; endl;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;selection_sort(20, tab);<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;for(int i=0; i&#60;20; i++) cout &#60;&#60; tab[i] &#60;&#60; " ";<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;cout &#60;&#60; endl;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
-                        }<br>
-                        <br>
-                        void selection_sort(int n, int t[])<br>
-                        {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;int i, j, k;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;for(i=0; i&#60;n; i++) {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k=i;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(j=i+1; j&#60;n; j++) if(t[j]&#60;t[k]) k=j;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(t[k], t[i]);<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                        }<br>
+                        using namespace std;<hr>
+                        <hr>
+                        void selection_sort(int n, int t[]);<hr>
+                        <hr>
+                        int main(void)<hr>
+                        {<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;int tab[20];<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;srand(time(NULL));<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;for(int i=0; i&#60;20; i++) {<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tab[i] = rand()%100;<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &#60;&#60; tab[i] &#60;&#60; " ";<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;cout &#60;&#60; endl;<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;selection_sort(20, tab);<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;for(int i=0; i&#60;20; i++) cout &#60;&#60; tab[i] &#60;&#60; " ";<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;cout &#60;&#60; endl;<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;return 0;<hr>
+                        }<hr>
+                        <hr>
+                        void selection_sort(int n, int t[])<hr>
+                        {<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;int i, j, k;<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;for(i=0; i&#60;n; i++) {<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k=i;<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(j=i+1; j&#60;n; j++) if(t[j]&#60;t[k]) k=j;<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(t[k], t[i]);<hr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<hr>
+                        }<hr>
                     </div>
                 </li>
             </ul>
